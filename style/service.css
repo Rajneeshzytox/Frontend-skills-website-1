@@ -1,0 +1,74 @@
+.service{
+    display: grid;
+    --col: 3;
+    --row: 2;
+    --min-size: 200px;
+    grid-template-columns: repeat(var(--col), minmax(var(--min-size), 400px));
+    grid-template-rows: repeat(var(--row), 1fr);
+    place-content: center;
+    padding: 10vh 5rem;
+    gap: 2rem;
+    row-gap: 4rem;
+    background-color: #111;
+    color: #ccc;
+}
+
+.service .service-heading{
+    grid-row: span 2;
+    /* color: #eee; */
+}
+
+
+/* card */
+
+.card-logo{
+    width: 4rem;
+    background-color: #555;
+}
+.card-heading{
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.card-para{
+    /* or use --para-size in html */
+    font-size: 1.6rem;
+}
+.card-link svg{width: 3rem; }
+.card-link{width: 4rem; opacity: 0; transition: 0.3s; }
+.cards:hover .card-link{
+    opacity: 1;
+    translate: 20px;
+    rotate: 45deg;
+}
+
+
+@media screen and (max-width: 800px) {
+    .service{
+        --col: 2;
+        --row: 3;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr 1fr !important;
+        
+    }
+    .service-heading{
+       grid-row: span 1 !important;
+       grid-column: span 2 !important;
+    
+        text-align: center;
+    }
+}
+@media screen and (max-width: 400px) {
+    .service{
+        --col: 1;
+        grid-template-columns: 1fr !important;
+        
+       
+        
+    }
+    .service-heading{
+       grid-row: span 1 !important;
+       grid-column: span 1 !important;
+
+        text-align: center;
+    }
+}

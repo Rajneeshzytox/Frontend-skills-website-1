@@ -1,0 +1,37 @@
+
+
+.brand-list{
+    background-color: hsl(0, 0%, 10%);
+    width: 80%;
+    height: var(--height);
+    
+    border-radius: 10px;
+    overflow-x: hidden;
+    gap: var(--brand-gap);
+    position: relative;
+    
+    
+}
+.brands .brand-list a{
+    animation: move-right calc(var(--quantity) * 1s) linear infinite;
+    position: absolute;
+    left: -100%;
+    /* animation-delay: var( (10s / var(--quantity)) * (var(--brand-no) -1)); */
+    animation-delay: var(--delay);
+}
+
+.brand-list a svg{
+    width: calc(var(--height)/2);
+    opacity: var(--brand-opacity);
+    
+}
+@keyframes move-right {
+    from{
+        left: -100%;
+    }
+    to{
+        left: 100%;
+    
+    }
+}
+

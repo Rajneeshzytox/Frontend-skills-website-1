@@ -1,0 +1,38 @@
+.banner{
+
+   
+}
+
+.bg-svg{
+    position: absolute;
+    left: var(--left);
+    right: var(--right);
+    top: var(--top);
+    bottom: var(--bottom);
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+    overflow: hidden;
+    filter: blur(0px);
+}
+svg, path, g{
+    max-height: 100%;
+    width: fit-content;
+    
+}
+@media screen and (max-width: 500px) {
+    .bg-svg:nth-last-of-type(2){display: none;}
+
+}
+
+.banner main{
+    max-width: 50vh;
+}
+.banner-text{
+    backdrop-filter: blur(40px);
+    border: 1px solid #ffffff3d;
+    background-color: #ffffff3d;
+    border-radius: 20px;
+    padding: 1rem 4rem;
+}

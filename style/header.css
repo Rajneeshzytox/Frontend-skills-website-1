@@ -1,0 +1,146 @@
+:root{
+    /* used in .raj-simple-nav  */
+    --nav-height: 56px;
+    --nav-max-width: 1440px;
+    --nav-default-width: 100%;
+    --nav-bg-color: #eee;
+   
+
+    /* nav items settings */
+    --nav-items-color: #000;
+    
+    --nav-items-transform: capitalize; /*capitalize uppercase lowercase*/
+    --nav-items-bold: 600;
+    --nav-items-font: Arial, Helvetica, sans-serif;
+    --nav-items-size: 10px;
+
+    /* nav logo settings */
+    --nav-logo-aspect-ratio: 1; /* width height ratio */
+    --nav-logo-width: 40px;
+    /* --nav-logo-url: url('../assets/nav-logo.png') ; */
+
+    
+  
+}
+
+/* -----------------------------------------------
+         general css nav start 
+-----------------------------------------------*/
+
+
+.nav-fixed{
+    position: fixed;
+    top: 0;
+}
+.nav-items-gap{
+    gap: var(--gap-xl);
+}
+.item-active{
+    color: var(--primary-color) !important;
+}
+.item-active::after{
+    content: '';
+    background-color: var(--primary-color);
+   position: absolute;
+   top: 120%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+    width: 30%;
+    height: 4px;
+    border-radius: 100px;
+
+}
+
+
+/* -----------------------------------------------
+            main css general nav start 
+-----------------------------------------------*/
+.raj-simple-nav{
+    max-width: var(--nav-max-width);
+    width: var(--nav-default-width);
+    height: var(--nav-height);
+    background-color: var(--nav-bg-color);
+    color: var(--nav-items-color);
+    position: relative;
+    z-index: 999 !important;
+    font-weight: var(--nav-items-bold);
+    font-family: var(--nav-items-font);
+    font-size: var(--text-size-sm);
+}
+
+.raj-simple-nav .nav-items li{
+    list-style: none;
+    text-transform: var(--nav-items-transform) ;
+}
+.raj-simple-nav .nav-items li a{
+    text-decoration: none;
+    color: var(--nav-items-color);
+    position: relative;
+    
+}
+
+.nav-logo-img{
+    max-width: var(--nav-logo-width);
+    width: var(--nav-logo-width);
+    aspect-ratio:var(--nav-logo-aspect-ratio);
+    background-color: none;
+    /* background-image: var(--nav-logo-url); */
+    cursor: pointer;
+    display: block;
+    
+}
+
+/* nav items on mobile hide unhide on btn click */
+.nav-option{
+    display: none;
+    cursor: pointer;
+    padding: 7px 14px;
+    aspect-ratio: 1;
+}
+
+
+
+@media screen and (max-width:850px ){
+    html{font-size: 60%;}
+    nav{justify-content: space-between !important;}
+    .nav2 ul{
+        position: absolute;
+        /* margin: 1rem ; */
+        right: 0;
+       overflow: scroll;
+        top: var(--nav-height);
+       z-index: 99;
+       background-color: #ececec;
+        flex-direction: column;
+        padding: var(--padding);
+        width: 30%;
+        height: 0vh;
+        /* border-radius: var(--border-radius); */
+        
+        pointer-events: none;
+        opacity: 0;
+        transition: .3s all;
+        /* scale: 1.2; */
+        
+        
+    }
+    .nav2 ul.navMobileActive{
+        opacity: 1;
+        scale: 1;
+        pointer-events: all;
+        height: 50vh;
+
+    }
+    .nav2 .nav-option{
+        display: block;
+    }
+    .nav2 div.items-gap{
+        gap: var(--gap);
+    }
+    .input-field{
+        width: 15px;
+        aspect-ratio: 1;
+
+    }
+    
+}

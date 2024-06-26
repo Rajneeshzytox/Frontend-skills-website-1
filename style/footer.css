@@ -1,0 +1,124 @@
+.footer{
+    background-color: #000;
+    color: #eee;
+    font-size: 3rem;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-areas: "newsletter footer-options"
+    "copyright-box copyright-box";
+}
+@media screen and
+(max-width: 790px) {
+    .footer-grid{
+        grid-template-areas: "newsletter" "footer-options"
+        "copyright-box";
+    
+    }
+    .copyright-box{
+
+        grid-column: span 1 !important;
+
+    }
+}
+
+.newsletter{
+    text-transform: uppercase;
+    min-height: 30vh;
+
+}
+
+.newsletter-email{
+   border: 1px solid #eeeeee4f;
+   border-radius: 2rem;
+   overflow: hidden;
+}
+.newsletter-email input{
+    border: none;
+    outline: none;
+    background: none;
+    padding: 1rem 2rem;
+    color: #eee;
+}
+.newsletter button{
+    height: 100%;
+    padding: 0 2rem;
+    border: none;
+    background: var(--primary-color);
+    color: #eee;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.footer-option{
+    padding: 2rem 4rem;
+}
+.footer-option ul, .footer-option ul li{width: 100%; transition: .2s all ease; position: relative; z-index: 1;}
+
+.footer-option ul, .footer-option ul li a{
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-option ul li::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, hsla(var(--primary-color-code), 0.3), hsla(var(--sec-color-code), 0.3));
+    transform-origin: bottom;
+    scale: 0;
+    transform: translateX(-100%);
+    transition: .2s ease;
+
+}
+.footer-option ul li:hover{
+
+    & a{color: #fff; transition: .2s;}
+    &::before {opacity: 1;scale: 1;transform: translateX(0%);}
+    & .footer-arrow{
+    opacity: 1;
+    pointer-events: all;
+    user-select: auto;
+    right: 0;
+    rotate: 45deg;
+;
+    }
+}
+
+.footer-arrow{
+    width: 3rem;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    top: 0;
+    right: 10%;
+    position: absolute;
+    transition-delay: .6s;
+    transition: .3s ease;
+}
+
+
+.copyright-box{
+    width: 100%;
+    grid-column: span 2;
+    /* border: 1px so/lid red; */
+}
+.social-links{
+    /* border: 1px solid red; */
+    width: 100%;
+    gap: 1rem;
+}
+.social-links a{
+    width: 3rem;
+    opacity: 0.5;
+}
+.social-links a:hover{
+    opacity: 1;
+}
+
+.copyright-text{
+    font-size: 1.5rem;
+    color: #9c9c9c;
+    text-align: center;
+}

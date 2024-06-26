@@ -1,0 +1,203 @@
+/* -----------------------------------------------
+                General CSS
+----------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition: .5s all; */
+    /* border: 1px solid red; */
+}
+
+:root{
+    /* default values */
+    --padding: 10px 20px;
+    --border-radius: 30px;
+    --text-size: 1rem;
+    --text-size-sm: 1.4rem;
+    --text-size-md: 1.6rem;
+    --text-size-lg: 1.8rem;
+    --text-size-xl: 2rem;
+    --text-size-2xl: 2.4rem;
+    --text-size-3xl: 2.8rem;
+    --text-size-4xl: 3rem;
+    --bold: 800;
+    --semi-bold: 600;
+
+    /* margins */
+    --m: 1rem;
+    --m-sm: 1.4rem;
+    --m-md: 1.6rem;
+    --m-lg: 1.8rem;
+    --m-xl: 2rem;
+    --m-2xl: 2.4rem;
+    --m-3xl: 2.8rem;
+    --m-4xl: 3rem;
+    /* gaps*/
+    --gap: 1rem;
+    --gap-sm: 1.4rem;
+    --gap-md: 1.6rem;
+    --gap-lg: 1.8rem;
+    --gap-xl: 2rem;
+    --gap-2xl: 2.4rem;
+    --gap-3xl: 2.8rem;
+    --gap-4xl: 3rem;
+
+    /* color */
+    --primary-color: hsl(280, 100%, 50%);
+    --primary-color-code: 280, 100%, 50%;
+    --sec-color: hsl(305, 100%, 50%);
+    --sec-color-code: 305, 100%, 50%;
+    --bg-color: #eee;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-size: 1.4rem;
+    /* overflow-x: hidden; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+a,a:visited,a:active{
+    user-select: none;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--link-color);
+}
+li{
+    list-style-type: none;
+}
+
+p{
+    max-width: 550px;
+    --para-size: 1.8rem;
+    font-size: var(--para-size);
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+section, footer, header, article{
+    position: relative;
+    padding: var(--sec-padding);
+}
+/* -----------------------------------------------
+                General CSS Classes
+----------------------------------------------- */
+.p-0{padding: 0 ;}
+.round{border-radius: 100% !important; aspect-ratio: 1;}
+.special-text{
+    --angle: 45deg;
+    --from: var(--primary-color);
+    --via: transparent;
+    --to: var(--sec-color);
+    background: linear-gradient(var(--angle), var(--from) , var(--to) );
+    background-clip: text;
+    color: transparent;
+}
+
+.inline-block{display: inline-block }
+.block{display: block;}
+.relative{display: relative;}
+
+.display-none{
+    display: none;
+}
+
+.bg-cover{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* flex */
+.items-gap{gap: var(--gap-md);}
+.flex{display: flex; align-items: center;}
+.flex-column{display: flex; flex-direction: column;}
+.flex-center{display:flex; justify-content: center; align-items: center;}
+.space-around{justify-content: space-around;}
+.space-between{justify-content: space-between;}
+.space-evenly{justify-content: space-evenly;}
+.item-center{align-items: center;}
+.flex-wrap{flex-wrap: wrap;}
+.flex-gap{gap: var(--gap);}
+
+/* grid */
+.grid{display: grid;}
+.col-2{grid-template-columns: repeat(2, minmax(200px, 1fr)) !important;}
+.row{grid-template-rows: 1fr;}
+
+
+
+
+.btn{
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    width: fit-content;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    font-size: var(--text-size-sm);
+    font-weight: var(--semi-bold);
+ 
+   transition: .3s all;
+    
+}
+.btn-border{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.btn-border:hover{
+    background: var(--primary-color);
+    
+    color: #fff;
+}
+
+
+.input-field{
+    background: none;
+    outline: none;
+    border: 1px solid #aaa8a8;
+    border-radius: 20px;
+    padding: 7px 15px;
+    position: relative;
+}
+
+.blur{--blur: 10px; filter: blur(var(--blur));}
+
+.bg-gradient{
+    --angle: 0deg;
+    --from: var(--primary-color);
+    --via: transparent;
+    --to: var(--sec-color);
+    --x: 0;
+    --y: 0;
+    display: block;
+    position: absolute;
+    z-index: -10;
+    width: 40vw;
+    background: linear-gradient(var(--angle), var(--from), var(--via), var(--to));
+    opacity: 0.5;
+    transform: translate(var(--x), var(--y));
+}
+
+.title{
+    --size: clamp(4rem, 3vh, 6rem);
+    font-size: var(--size);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 0.9;
+    text-transform: capitalize;
+    text-align: var(--align);
+}
