@@ -16,6 +16,30 @@
      <link rel="stylesheet" href="style/footer.css" />
 </head>
 <body>
+
+    <!-- temp alert msg start -->
+    <div class="update-alert" id="update-alert" style="background-color: #eeeeeef1;
+    color: #111;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;">
+        🚧 This site is currently under construction. Some elements may look unfinished or not work as intended. 🚧
+        <button class="close-btn" onclick="document.getElementById('update-alert').style.display='none';" style="background-color: transparent;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 0 10px;">&times;</button>
+    </div>
+    <!-- temp alert msg ends -->
+
+
     <!-- Header Section Start Here -->
     <header>
         <nav class="raj-simple-nav nav2 flex space-around" style="padding: 10px 20px;">
