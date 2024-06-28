@@ -101,46 +101,34 @@
 
 
 @media screen and (max-width:850px ){
-    html{font-size: 60%;}
     nav{justify-content: space-between !important;}
     .nav2 ul{
         position: absolute;
-        /* margin: 1rem ; */
-        right: 0;
-       overflow: scroll;
-        top: var(--nav-height);
-       z-index: 99;
-       background-color: var(--bg-color-white);
-        flex-direction: column;
-        padding: var(--padding);
-        width: 30%;
-        height: 0vh;
-        /* border-radius: var(--border-radius); */
-        
-        pointer-events: none;
+        right: -100%;
         opacity: 0;
-        transition: .3s all;
-        /* scale: 1.2; */
-        
-        
+        top: 0;
+        z-index: 99;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 5rem 4rem;
+        width: 100%;
+        height: 100vh;
+        gap: 5rem;
+        font-size: 4rem;
+        font-weight: 400;
+        background-color: #ccc;
     }
-    .nav2 ul.navMobileActive{
-        opacity: 1;
-        scale: 1;
-        pointer-events: all;
-        height: 50vh;
 
-    }
-    .nav2 .nav-option{
+    .nav-option{
         display: block;
     }
-    .nav2 div.items-gap{
-        gap: var(--gap);
-    }
-    .input-field{
-        width: 15px;
-        aspect-ratio: 1;
 
+    #closeNavBtn{
+        position: absolute;
+        top: 3rem;
+        right: 4rem;
+        cursor: pointer;
     }
+
     
 }
