@@ -9,8 +9,8 @@
     padding: 10vh 5rem;
     gap: 2rem;
     row-gap: 4rem;
-    background-color: #111;
-    color: #ccc;
+    background-color: var(--bg-color-grey);
+    color: var(--text-grey);
 }
 
 .service .service-heading{
@@ -23,7 +23,8 @@
 
 .card-logo{
     width: 4rem;
-    background-color: #555;
+    background-color: var(--text-grey);
+    color: var(--text-white);
 }
 .card-heading{
     font-size: 2rem;

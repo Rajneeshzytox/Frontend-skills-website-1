@@ -10,6 +10,7 @@
      <link rel="stylesheet" href="style/main.css" />
      <link rel="stylesheet" href="style/header.css" />
      <link rel="stylesheet" href="style/hero.css" />
+     <link rel="stylesheet" href="style/sec2.css" />
      <link rel="stylesheet" href="style/brands.css" />
      <link rel="stylesheet" href="style/banner.css" />
      <link rel="stylesheet" href="style/service.css" />
@@ -18,8 +19,8 @@
 <body>
 
     <!-- temp alert msg start -->
-    <div class="update-alert" id="update-alert" style="background-color: #eeeeeef1;
-    color: #111;
+    <div class="update-alert" id="update-alert" style="background-color: var(--bg-color-white);
+    color: var(--text-black);
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -35,7 +36,8 @@
         border: none;
         font-size: 20px;
         cursor: pointer;
-        padding: 0 10px;">&times;</button>
+        padding: 0 10px;
+        color: var(--text-black);">&times;</button>
     </div>
     <!-- temp alert msg ends -->
 
@@ -97,7 +99,6 @@
     </section>
     <!-- Hero Section Ends Here -->
     
-    
     <!-- ***************************
     Brands SECTION STARTS HERE
     ***************************  -->
@@ -144,6 +145,41 @@
     
     <!-- Brands Section Ends Here -->
     
+        <!-- ***************************
+     SECTION 2 STARTS HERE
+    ***************************  -->
+    <section class="sec-2">
+        <div class="item1 flex-center">
+            <div class="sec2-item-text">
+                <h3>Card Heading text </h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ut eos voluptatibus delectus quaerat ipsa officia optio aliquam temporibus dolorem! Dolorum vel beatae, tempore error a assumenda doloribus aliquam deleniti.</p>
+            </div>
+            <div class="sec2-item-img flex-center">
+                <img src="./assets/nav-logo.png">
+            </div>
+        </div>
+        <div class="item2 flex-center">
+            <div class="sec2-item-text">
+                <h3>Card Heading text </h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ut eos voluptatibus delectus quaerat ipsa officia optio aliquam temporibus dolorem! Dolorum vel beatae, tempore error a assumenda doloribus aliquam deleniti.</p>
+            </div>
+            <div class="sec2-item-img flex-center">
+                <img src="./assets/sucess.png">
+            </div>
+        </div>
+        <div class="item3 flex-center">
+            <div class="sec2-item-text">
+                <h3>Card Heading text </h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima ut eos voluptatibus delectus quaerat ipsa officia optio aliquam temporibus dolorem! Dolorum vel beatae, tempore error a assumenda doloribus aliquam deleniti.</p>
+            </div>
+            <div class="sec2-item-img flex-center">
+                <img src="./assets/designer.png">
+            </div>
+        </div>
+    </section>
+
+<!-- Section 2 Ends Here -->
+
     <!-- ***************************
     banner SECTION STARTS HERE
     ***************************  -->
@@ -195,16 +231,13 @@
             Another Section<br/>
             Heading to make it cooler
         </div>
-        <div class="cols flex-center banner-text" style="gap: 5vw;">
-        <main class="col flex flex-center" aria-hidden="true">
-            <div class="hero-img">
-               <img src="./assets/designer.png" />
-            </div>
-        </main>
-        <main class="col flex ">
+        <div class="flex-center banner-text">
+            <img src="./assets/designer.png" />
+ 
+        <main class="flex ">
             <div class="hero-text flex-column flex-gap">
                 
-                <h3 class="title" style="--size: clamp(3rem, 4vh, 6rem);">Image big title</h3>
+                <h3>Image big title</h3>
                 <p class="banner-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quod repellat pariatur eum beatae facilis, quisquam est voluptatum provident quia, aperiam soluta accusantium itaque aliquam doloribus laboriosam molestiae quo minus!</p>
                 <a class="hero-btn  inline-block btn btn-border">Explore</a>
             </div>
@@ -283,13 +316,13 @@
                     </button>
                 </div>
             </div>
-            <div class="footer-option item-center flex " style="--link-color: #a1a1a1;">
+            <div class="footer-option item-center flex " style="--link-color: var(--text-grey);">
                 <ul class="flex-column flex-gap">
                     <li >
                         <a class="footer-arrow round flex-center" href="#" target="_blank"> 
                             <svg viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg" stroke="#aaa"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#aaa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                         </a>
-                    <a href="#" target="_blank">About Developer</a>
+                    <a href="#">About Developer</a>
                    
                    
                     </li>
@@ -312,10 +345,10 @@
                         <svg fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M22,12.247a10,10,0,0,1-6.833,9.488c-.507.1-.687-.214-.687-.481,0-.328.012-1.407.012-2.743a2.386,2.386,0,0,0-.679-1.852c2.228-.248,4.566-1.093,4.566-4.935a3.859,3.859,0,0,0-1.028-2.683,3.591,3.591,0,0,0-.1-2.647s-.838-.269-2.747,1.025a9.495,9.495,0,0,0-5.007,0c-1.91-1.294-2.75-1.025-2.75-1.025a3.6,3.6,0,0,0-.1,2.647A3.864,3.864,0,0,0,5.62,11.724c0,3.832,2.334,4.69,4.555,4.942A2.137,2.137,0,0,0,9.54,18a2.128,2.128,0,0,1-2.91-.831A2.1,2.1,0,0,0,5.1,16.142s-.977-.013-.069.608A2.646,2.646,0,0,1,6.14,18.213s.586,1.944,3.368,1.34c.005.835.014,1.463.014,1.7,0,.265-.183.574-.683.482A10,10,0,1,1,22,12.247Z"></path></g></svg>
                     </a>
                     <a href="#">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>social_linkedin</title> <rect width="24" height="24" fill="none"></rect> <path d="M19,3a2,2,0,0,1,2,2V19a2,2,0,0,1-2,2H5a2,2,0,0,1-2-2V5A2,2,0,0,1,5,3H19m-.5,15.5V13.2a3.26,3.26,0,0,0-3.26-3.26h0a2.9,2.9,0,0,0-2.32,1.3V10.13H10.13V18.5h2.79V13.57a1.4,1.4,0,1,1,2.79,0V18.5H18.5M6.88,8.56A1.68,1.68,0,0,0,8.56,6.88h0a1.69,1.69,0,1,0-3.37,0h0A1.69,1.69,0,0,0,6.88,8.56M8.27,18.5V10.13H5.5V18.5Z"></path> </g></svg>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke="transparent" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>social_linkedin</title> <rect width="24" height="24" fill="none"></rect> <path d="M19,3a2,2,0,0,1,2,2V19a2,2,0,0,1-2,2H5a2,2,0,0,1-2-2V5A2,2,0,0,1,5,3H19m-.5,15.5V13.2a3.26,3.26,0,0,0-3.26-3.26h0a2.9,2.9,0,0,0-2.32,1.3V10.13H10.13V18.5h2.79V13.57a1.4,1.4,0,1,1,2.79,0V18.5H18.5M6.88,8.56A1.68,1.68,0,0,0,8.56,6.88h0a1.69,1.69,0,1,0-3.37,0h0A1.69,1.69,0,0,0,6.88,8.56M8.27,18.5V10.13H5.5V18.5Z"></path> </g></svg>
                     </a>
                     <a href="#">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#ffffff"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#ffffff"></path> </g></svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="instaIcon" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#ffffff"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#ffffff"></path> </g></svg>
                     </a>
                 </div>
                 <div class="copyright-text">copyright here</div>
@@ -325,5 +358,10 @@
     </footer>
     
     <!-- banner Section Ends Here -->
+
+
+    <!-- js -->
+
+    <script src="./js/darkmode.js"></script>
 </body>
 </html>

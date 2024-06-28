@@ -21,10 +21,7 @@ svg, path, g{
     width: fit-content;
     
 }
-@media screen and (max-width: 500px) {
-    .bg-svg:nth-last-of-type(2){display: none;}
 
-}
 
 .banner main{
     max-width: 50vh;
@@ -34,5 +31,29 @@ svg, path, g{
     border: 1px solid #ffffff3d;
     background-color: #ffffff3d;
     border-radius: 20px;
-    padding: 1rem 4rem;
+    padding: 3.5rem 3rem;
+    justify-content: space-evenly;
+}
+
+.banner-text h3{
+    font-size: 2.5rem;
+    letter-spacing: -0.1rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+
+}
+.banner-text img{
+    width: 30rem;
+}
+
+@media screen and (max-width: 730px) {
+
+        .banner-text{
+            flex-direction: column !important;
+        }
+
+}
+@media screen and (max-width: 500px) {
+    .bg-svg:nth-last-of-type(2){display: none;}
+
 }

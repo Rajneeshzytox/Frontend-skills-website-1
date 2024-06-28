@@ -1,6 +1,6 @@
 .footer{
-    background-color: #000;
-    color: #eee;
+    background-color: var(--bg-color-black);
+    color: var(--text-white);
     font-size: 3rem;
 }
 
@@ -39,14 +39,14 @@
     outline: none;
     background: none;
     padding: 1rem 2rem;
-    color: #eee;
+    color: var(--text-white);
 }
 .newsletter button{
     height: 100%;
     padding: 0 2rem;
     border: none;
     background: var(--primary-color);
-    color: #eee;
+    color: #EEE;
     border-radius: 0 2rem 2rem 0;
 }
 
@@ -74,7 +74,7 @@
 }
 .footer-option ul li:hover{
 
-    & a{color: #fff; transition: .2s;}
+    & a{color: var(--text-white); transition: .2s;}
     &::before {opacity: 1;scale: 1;transform: translateX(0%);}
     & .footer-arrow{
     opacity: 1;
@@ -96,8 +96,14 @@
     position: absolute;
     transition-delay: .6s;
     transition: .3s ease;
+   
 }
-
+.footer-arrow svg,
+.footer-arrow svg path,
+.footer-arrow svg g
+{
+   stroke: var(--text-white);
+}
 
 .copyright-box{
     width: 100%;
@@ -112,6 +118,15 @@
 .social-links a{
     width: 3rem;
     opacity: 0.5;
+    color: var(--text-grey);
+}
+.social-links a svg, .social-links a svg path{
+
+    fill: var(--text-grey);
+}
+#instaIcon{
+
+    stroke: var(--text-grey);
 }
 .social-links a:hover{
     opacity: 1;
@@ -119,6 +134,6 @@
 
 .copyright-text{
     font-size: 1.5rem;
-    color: #9c9c9c;
+    color: var(--text-grey);
     text-align: center;
 }

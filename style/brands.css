@@ -1,7 +1,7 @@
 
 
 .brand-list{
-    background-color: hsl(0, 0%, 10%);
+    background-color: var(--bg-color-grey);
     width: 80%;
     height: var(--height);
     

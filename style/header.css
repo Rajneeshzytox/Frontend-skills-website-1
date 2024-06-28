@@ -3,11 +3,11 @@
     --nav-height: 56px;
     --nav-max-width: 1440px;
     --nav-default-width: 100%;
-    --nav-bg-color: #eee;
+    --nav-bg-color: var(--bg-color-white);
    
 
     /* nav items settings */
-    --nav-items-color: #000;
+    --nav-items-color: var(--text-black);
     
     --nav-items-transform: capitalize; /*capitalize uppercase lowercase*/
     --nav-items-bold: 600;
@@ -110,7 +110,7 @@
        overflow: scroll;
         top: var(--nav-height);
        z-index: 99;
-       background-color: #ececec;
+       background-color: var(--bg-color-white);
         flex-direction: column;
         padding: var(--padding);
         width: 30%;
